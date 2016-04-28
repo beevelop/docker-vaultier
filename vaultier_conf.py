@@ -13,7 +13,7 @@ RAVEN_CONFIG = {
     'dsn': os.environ.get('RAVEN_DSN', '')
 }
 
-aHost = os.environ.get('WEBLATE_ALLOWED_HOSTS', ['localhost', '127.0.0.1'])
+aHost = os.environ.get('VAULTIER_ALLOWED_HOSTS', ['localhost', '127.0.0.1'])
 ALLOWED_HOSTS = aHost.split(',') if isinstance(aHost, str) else aHost
 
 VAULTIER.update({
