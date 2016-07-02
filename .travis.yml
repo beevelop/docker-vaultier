@@ -1,0 +1,9 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t vaultier .
+  - docker run --name vaultier -d vaultier
+  - docker exec vaultier /bin/sh -c "apt-get update && apt-get install curl -y --no-install-recommends && curl -f localhost:80"
